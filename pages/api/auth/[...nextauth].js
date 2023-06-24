@@ -12,7 +12,7 @@ export const authOptions = {
     jwt: {
         encryption: true,
     },
-    secret: process.env.JWT_SECRET,
+    secret: process.env.NEXT_PUBLIC_SECRET,
     // callbacks: {
     //     redirect: async (url, baseUrl) => {
     //         return Promise.resolve("/dashboard");
