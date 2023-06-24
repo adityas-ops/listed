@@ -58,7 +58,6 @@ const cardItems = [
   },
 ];
 
-
 function Dashboard({ session }) {
   return (
     <div className="w-screen h-screen max-h-screen">
@@ -147,35 +146,74 @@ function Dashboard({ session }) {
               </div>
             </div>
             <div className="mt-[2.5rem] w-full h-full grid grid-cols-4 gap-6">
-              {cardItems.map((item, index) => (
-                <div
-                  key={index}
-                  className={`bg-[${item.color}] xl:w-[13.75rem] w-[full] h-[7.5rem] p-9   px-[1.5rem] py-[1.25rem] rounded-[20px]`}
-                >
-                  <div className="w-full flex justify-end">
-                    <Image
-                      src={item.icon}
-                      width={24}
-                      height={24}
-                      alt="revenue"
-                      // className='w-[20px] h-[24px]'
-                    />
-                  </div>
-                  <p className="text-[0.875rem] font-Lato">{item.title}</p>
-                  <p className="lg:text-[1.5rem]  text-[1rem] font-[700] font-sans mt-[5px]">
-                    {item.amount}
-                  </p>
+              {/* cards */}
+              <div className="bg-[#DDEFE0] xl:w-[13.75rem] w-[full] h-[7.5rem] p-9   px-[1.5rem] py-[1.25rem] rounded-[20px]">
+                <div className="w-full flex justify-end">
+                  <Image
+                    src="/images/revenue.svg"
+                    width={24}
+                    height={24}
+                    alt="revenue"
+                    // className='w-[20px] h-[24px]'
+                  />
                 </div>
-              ))}
+                <p className="text-[0.875rem] font-Lato">Total Revenues</p>
+                <p className="lg:text-[1.5rem]  text-[1rem] font-[700] font-sans mt-[5px]">
+                  $2,129,430
+                </p>
+              </div>
+              {/* cards */}
+              <div className="bg-[#F4ECDD] xl:w-[13.75rem] w-[full] h-[7.5rem] p-9   px-[1.5rem] py-[1.25rem] rounded-[20px]">
+                <div className="w-full flex justify-end">
+                  <Image
+                    src="/images/total-transactions-icon.svg"
+                    width={24}
+                    height={24}
+                    alt="revenue"
+                    // className='w-[20px] h-[24px]'
+                  />
+                </div>
+                <p className="text-[0.875rem] font-Lato">Total Transactions</p>
+                <p className="lg:text-[1.5rem]  text-[1rem] font-[700] font-sans mt-[5px]">
+                1,520
+                </p>
+              </div>
+              {/* cards */}
+              <div className="bg-[#EFDADA] xl:w-[13.75rem] w-[full] h-[7.5rem] p-9   px-[1.5rem] py-[1.25rem] rounded-[20px]">
+                <div className="w-full flex justify-end">
+                  <Image
+                    src="/images/like.svg"
+                    width={24}
+                    height={24}
+                    alt="revenue"
+                    // className='w-[20px] h-[24px]'
+                  />
+                </div>
+                <p className="text-[0.875rem] font-Lato">Total Likes</p>
+                <p className="lg:text-[1.5rem]  text-[1rem] font-[700] font-sans mt-[5px]">
+                9,721
+                </p>
+              </div>
+              {/* cards */}
+              <div className="bg-[#DEE0EF] xl:w-[13.75rem] w-[full] h-[7.5rem] p-9   px-[1.5rem] py-[1.25rem] rounded-[20px]">
+                <div className="w-full flex justify-end">
+                  <Image
+                    src="/images/users.svg"
+                    width={28}
+                    height={28}
+                    alt="revenue"
+                    // className='w-[20px] h-[24px]'
+                  />
+                </div>
+                <p className="text-[0.875rem] font-Lato">Total Users</p>
+                <p className="lg:text-[1.5rem]  text-[1rem] font-[700] font-sans mt-[5px]">
+                892
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <button onClick={
-        ()=>signOut()
-      }>
-        sign out
-      </button>
     </div>
   );
 }
