@@ -171,6 +171,11 @@ function Dashboard({ session }) {
           </div>
         </div>
       </div>
+      <button onClick={
+        ()=>signOut()
+      }>
+        sign out
+      </button>
     </div>
   );
 }
