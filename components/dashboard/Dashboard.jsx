@@ -2,6 +2,8 @@ import React from "react";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
+import Chart1 from "./Chart1";
+import Chart2 from "./Chart2";
 
 const items = [
   {
@@ -60,9 +62,9 @@ const cardItems = [
 
 function Dashboard({ session }) {
   return (
-    <div className="w-screen h-screen max-h-screen">
+    <div className="w-screen h-fit  min-h-screen relative ">
       <div className="w-full h-full p-[2.5rem] flex">
-        <div className="w-[280px] h-full bg-black rounded-[30px] relative">
+        <div className="w-[280px]  bg-black rounded-[30px] relative">
           <div className=" text-white  px-[3.125rem] mt-[50px]">
             <p className="text-[#fff] text-[2.25rem] font-[700] font-Montserrat m-0 p-0">
               Board.
@@ -145,7 +147,7 @@ function Dashboard({ session }) {
                 </Link>
               </div>
             </div>
-            <div className="mt-[2.5rem] w-full h-full grid grid-cols-4 gap-6">
+            <div className="mt-[2.5rem] w-full h-fit grid grid-cols-4 gap-6">
               {/* cards */}
               <div className="bg-[#DDEFE0] xl:w-[13.75rem] w-[full] h-[7.5rem] p-9   px-[1.5rem] py-[1.25rem] rounded-[20px]">
                 <div className="w-full flex justify-end">
@@ -211,6 +213,47 @@ function Dashboard({ session }) {
                 </p>
               </div>
             </div>
+            {/*  chart starts */}
+           <div className="h-fit">
+           <Chart1/>
+           </div>
+           <div className="flex justify-between">
+           <div className="w-[45%] h-fit">
+            <Chart2/>
+           </div>
+           <div className="w-[45%] h-fit">
+           <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-[20px] bg-white mt-[2.5rem] h-[16.25rem]">
+        <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
+          <div className="flex flex-wrap items-center">
+            <div className="relative w-full  flex justify-between items-center">
+              <h2 className=" text-black text-[1.125rem] mb-1  font-[700]">
+               Today Shedules
+              </h2>
+              <h6 className="text-[#858585] text-[0.875rem] font-Montserrat">see all {'>'} </h6>
+            </div>
+          </div>
+        </div>
+        <div className="p-4 px-8 pt-1 w-full flex flex-col md:flex-row flex-wrap  text-black">
+        <div className="w-full h-[66px] flex">
+                      <div className="bg-[#9BDD7C] flex-[1%] w-[1%] h-full"/>
+                      <div className="flex-[99%] w-[99%] h-full px-4">
+                        <p className="text-[#666] text-[14px] font-Lato font-[700]">Meeting with suppliers from Kuta Bali</p>
+                        <p className="text-[12px] font-Lato text-[#999] mt-[5px]">14.00-15.00</p>
+                        <p className="font-lato text-[#999] text-[12px] mt-[5px]">at Sunset Road, Kuta, Bali </p>
+                      </div>
+        </div>
+        <div className="w-full h-[66px] flex mt-[14px]">
+                      <div className="bg-[#6972C3] flex-[1%] w-[1%] h-full"/>
+                      <div className="flex-[99%] w-[99%] h-full px-4">
+                        <p className="text-[#666] text-[14px] font-Lato font-[700]">Meeting with suppliers from Kuta Bali</p>
+                        <p className="text-[12px] font-Lato text-[#999] mt-[5px]">18.00-20.00</p>
+                        <p className="font-lato text-[#999] text-[12px] mt-[5px]">at Central Jakarta  </p>
+                      </div>
+        </div>
+        </div>
+      </div>
+           </div>
+           </div>
           </div>
         </div>
       </div>
